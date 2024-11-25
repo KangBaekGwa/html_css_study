@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE-edge">
+  <meta http-equiv="refresh" content="10">
+  <meta name="author" content="백과">
+  <meta name="description" content="html 공부용 페이지">
+  <meta name="keywords" content="예를 들면, 강아지, 고양이, 정보, 반려동물, 등등">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>백과</title>
+</head>
+
+<body>
+  <h1>H1 제목 태그</h1>
+  <p>p태그 표시</p>
+  <hr>
+  <!--이건 줄바꿈임-->
+  <h2>H2 작은 제목 태그</h2>
+  <p title="몰라?">p태그, 제목의 크기가 바뀌었습니다.</p>
+  <p>p태그를 연달아서 쓰면, 자동으로 태그 사이에 띄워쓰기가 들어갑니다.</p>
+  <p>p태그는 하나의 문단 블럭(?) 역할입니다.
+    또한, 이렇게 막 엔터를 친다거나
+
+
+
+    스페이스바를 막 눌러도, 인식되지 않습니다.
+    따라서 스페이스바를 쓰고 싶다면, &nbsp;&nbsp;&nbsp;&nbsp; 를 쓰고
+    줄바꾸고 싶을때는, <br>을 쓰면 됩니다.</p>
+  <hr>
+  <p>만약 강조를 하고 싶다면 <strong>이렇게!</strong></p>
+  <p>만약 기울이고 싶다면 <em>요렇게!</em></p>
+  <p>형광색으로 강조 하고 싶다면 <mark>요딴식으로</mark></p>
+  <p>물론 합쳐서 쓸수 도있음 <strong><mark>이렇게</mark></strong></p>
+  <hr>
+  <p>블록안에 블록을 넣으면, 새로운 블록이 됩니다.</p>
+  <hr>
+  <h2>이미지 표시!</h2>
+  <img src="images/캡처.PNG" alt="이미지 설명" width="300" height="300">
+  <p>이미지 표시에는 img 태그를 사용</p>
+  <hr>
+  <p>div태그를 사용해서, 블록(컨테이너) 묶기</p>
+  <h1>목표는?</h1>
+  <div>
+    <h2>운동</h2>
+    <p>운동 매일매일 하기</p>
+  </div>
+  <div>
+    <h2>공부</h2>
+    <p>공부 매일매일 하기</p>
+  </div>
+  <hr>
+  <div id="href_tag">
+    <h1>링크 연결해보기</h1>
+    <h2>링크는 a태그를 사용합니다.</h2>
+    <a href="https://www.naver.com">
+      네이버 이동
+    </a>
+    <br>
+    <h2>이미지로 바꿀수도 있습니다.</h2>
+    <a href="https://www.naver.com">
+      <img src="images/캡처.PNG" alt="이미지" width="300">
+    </a>
+    <br>
+    <h2>target 속성을 추가하면, 새로운 창이 열리도록 할 수 있습니다. "_self"는 현재 탭에서 열기, "_blank"는 새탭에서 열기입니다.</h2>
+    <a href="https://www.naver.com" target="_blank">
+      새탭으로 열기
+    </a>
+    <a href="https://www.naver.com" target="_self">
+      기존창으로 열기 "_self" 사용
+    </a>
+    <h2>전화번호 등도 가능합니다.</h2>
+    <a href="tel:010-1234-1234">010-1234-1234 전화걸기</a>
+    <br>
+    <a href="mailto:ksu9801@naver.com">ksu9801@naver.com 으로 메일 보내기</a>
+  </div>
+  <hr>
+  <div>
+    <h1>목록 만들기</h1>
+    <h2>순서가 없는 리스트는 ul 태그를 사용합니다.</h2>
+    <h2>귀여운 동물 목록</h2>
+    <ul>
+      <li><strong>강아지</strong></li>
+      <li>고양이</li>
+      <li>두더지</li>
+      <li>햄스터</li>
+    </ul>
+    <h2>순서가 있는 리스트는 ol 태그를 사용합니다.</h2>
+    <h2>프로그래밍 공부 순서</h2>
+    <ol>
+      <li><mark>HTML</mark></li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>NOEDJS</li>
+    </ol>
+  </div>
+  <hr>
+  <div>
+    <h1>입력 박스 사용</h1>
+    <p>사용 가능한 type은 20여가지 입니다. 기본값은 text 입니다.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">[mdn web docs] type 확인</a>
+    <br>
+    <input type="text" name="nickname"> <br> <br>
+    <p>placeholder를 추가하면, 안내 메세지를 추가할 수 있습니다.</p>
+    <input type="text" maxlength="5" placeholder=닉네임 name="nickname"> <br> <br>
+    <input type="button" name="button"> <br> <br>
+    <input type="color" name="color"> <br> <br>
+    <input type="range" max="100" , min="0" , step="10" name="score"> <br> <br>
+    <input type="date" name="birthday"> <br> <br>
+  </div>
+  <hr>
+  <div>
+    <h1>선택 박스 (Select)</h1>
+    <h2>select 태그를 사용해서 선택 박스를 만들 수 있습니다.</h2>
+    <h2>option 태그를 select 태그 안쪽에서 사용하여, 리스트를 만들 수 있습니다.</h2>
+    <select name="cafe" id="cafe_id">
+      <option value="starbucks">스타벅스</option>
+      <option value="twosome">투썸</option>
+      <option value="edia">이디야</option>
+      <option value="sb">스벅</option>
+    </select>
+    <h2>select에는 multiple 이라는 속성을 추가할 수 있습니다.</h2>
+    <select name="cafe_multiple" multiple id="cafe_multiple_id">
+      <option value="starbucks">스타벅스</option>
+      <option value="twosome">투썸</option>
+      <option value="edia">이디야</option>
+      <option value="sb">스벅</option>
+    </select>
+  </div>
+  <hr>
+  <div>
+    <h1>textarea</h1>
+    <h2>여러개의 텍스트를 한번에 받을 수 있습니다.</h2>
+    <textarea name="textarea" id="textarea_id" cols="30" rows="10">기본값</textarea>
+  </div>
+  <div>
+    <h1>요청을 보낼때는 form 태그를 사용</h1>
+    <form action="exam.php" method="post">
+      <input type="text" placeholder="NAME" name="name">
+      <br>
+      <select name="pet" id="pet">
+        <option value="dog">강아지</option>
+        <option value="cat">고양이</option>
+        <option value="parrot">앵무새</option>
+      </select>
+      <br>
+      <input type="submit" value="전송">
+    </form>
+  </div>
+</body>
+
+</html>
