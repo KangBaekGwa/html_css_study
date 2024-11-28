@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+<body>
+  <div>
+    <h1>바로가기</h1>
+    <a href="index.html">html 공부</a>
+  </div>
+  <div>
+  <h1>여러가지 style 태그를 사용하는 법</h1>
+  <p style="color : blue">인라인 style</p>
+  <hr>
+  <p>head에 p태그의 스타일을 지정할 수 있습니다.</p>
+  <hr>
+  <p>css 문서를 따로 만들어서 연결해줄 수도 있습니다.</p>
+  <hr>
+  <p>이때, 적용 우선순위는 다음과 같습니다</p>
+  <p>인라인 > 동일 문서 내, style 태그 > 외부 참조 css 태그</p>
+  <p>EX) 동일 문서 내, p태그의 css를 style 태그를 통해 지정해놓았으면, css 파일을 외부에서 link 해와도 적용되지 않습니다.</p>
+  </div>
+  <div>
+    <h1>선택자의 종류</h1>
+    <hr>
+    <h2 id="gagaga">전체 선택자</h2>
+    <p>*{</p>
+    <p>color: blue</p>
+    <p>}</p>
+    <hr>
+    <h2>태그 선택자</h2>
+    <p>p{</p>
+    <p>color: blue</p>
+    <p>}</p>
+    <hr>
+    <h2>클래스 선택자</h2>
+    <p>.text{</p>
+    <p>color: blue</p>
+    <p>}</p>
+    <p>=> 문서 내, class가 "text"인 모든 요소의 글자 색을 파란색으로 지정한다.</p>
+    <hr>
+    <h2>아이디 선택자</h2>
+    <p>#topic{</p>
+    <p>color: blue</p>
+    <p>}</p>
+    <hr>
+    <h2>그룹 선택자</h2>
+    <p>h1, p, div{</p>
+    <p>color: blue</p>
+    <p>}</p>
+    <p>다양한 그룹에 css를 먹입니다.</p>
+    <hr><hr>
+    <h2>선택자가 겹치는 경우</h2>
+    <p>선택자가 겹치는 경우, 나중에 작성된 스타일이 적용된다.</p>
+    <p>선택자가 다르지만, 요소가 겹치는 경우, 선택자 우선순위에 의해 적용될 스타일이 적용된다.</p>
+    <p>아이디 선택자 > 클래스 선택자 > 태그 선택자</p>
+  </div>
+  <div>
+    <h1>텍스트 꾸미기</h1>
+    <hr>
+    <h2>폰트 적용하기</h2>
+    <p>*{</p>
+    <p>font-family: serif, monospace;</p>
+    <p>}</p>
+    <h2>폰트 사이즈 적용하기</h2>
+    <p>폰트 사이즈적용에는 3가지의 옵션이 있습니다.</p>
+    <ol>
+      <li>px : 모티너 상의 화소 하나 크기에 대응하는 <strong>절대적인 크기</strong></li>
+      <li>rem : <html> 태그의 font-size 에 대응하는 상대적인 크기</html></li>
+      <li>em : 부모 태그(상위 태그)의 font-size에 대응하는 상대적인 크기</li>
+    </ol>
+    <h2>블록 내, 텍스트를 정렬</h2>
+    <p>오른쪽으로 정렬하기</p>
+    <p>p{ text-align: right; }</p>
+    <h2>색상 지정하기</h2>
+    <p>다양한 방법이 있습니다. [키워드, RGB색상코드, RGB 함수]</p>
+    <p>span{ color: red; }</p>
+    <p>span{ color: #FF0000; }</p>
+    <p>span{ color: rgb(100%, 0%, 0%); }</p>
+    <p>모두 동일하게 빨간색 입니다.</p>
+  </div>
+  <div>
+    <h1>display & border 속성</h1>
+    <h2>display를 사용해서 속성값을 변경합니다.</h2>
+    <p>inline : 인라인으로 처리</p>
+    <p>block : 블록 레벨로 처리</p>
+    <p>inline-block : 인라인으로 배치하되, 블록 레벨 요소를 가질 수 있도록 처리</p>
+    <p>none : 디스플레이 하지 않는다.</p>
+    <p>*{display : inline}</p>
+    <h2>border 속성을 추가해서 테두리를 그릴 수 있다.</h2>
+    <p>border-color : color 정의</p>
+    <p>border-width : thin, medium, thick, px, em, rem 단위 등등</p>
+    <p>border-style : none(기본값), solid(직선), dotted(점선), dashed(긴 점선)</p>
+  </div>
+  <div>
+    <h1>박스 모델</h1>
+    <h2>박스모델 이란?</h2>
+    <p>브라우저가 요소를 렌더링 할 때, 각각의 요소는 기본적으로 사각형 형태로 영역을 차지하게 된다. 이 영역을 `박스`라 표현하며, CSS는 박스의 크기, 위치, 속성을 결정할 수 있습니다.</p>
+    <img src="/images/박스모델.PNG" alt="박스모델">
+    <h2>박스 각 영역의 크기를 정의하는 법</h2>
+    <p>콘텐츠 영역 : witdh, height</p>
+    <p>안쪽 여백 : padding</p>
+    <p>바깥쪽 여백 : margin</p>
+    <p>테두리 : border-width</p>
+  </div>
+  <div>
+    <h1>박스 모델 margin/padding</h1>
+    <p>테두리(border)를 기준으로, 밖은 margin, 안은 padding 을 정의합니다.</p>
+    <img src="/images/박스메돌2.PNG" alt="">
+    <h2>하위 속성 정의하기</h2>
+    <p>-left, -top 등을 통해서 상하좌우 margin/padding 을 각각 정의할 수 있습니다.</p>
+    <p>div{ padding-top: 10px; padding-left:20px; }</p>
+    <p>div태그에 패딩 속성 중, `top`과 `left`를 각각 지정</p>
+    <img src="/images/박스모델3.PNG" alt="">
+    <h2>여러값을 한번에 정의하기</h2>
+    <p>div{ padding: 10px 10px 10px 10px; }</p>
+    <p>순서대로 `상` `우` `하` `좌` 적용</p>
+    <p>div{ padding: 10px 10px 10px; }</p>
+    <p>순서대로 `상` `좌우` `하` 적용</p>
+    <p>div{ padding: 10px 10px; }</p>
+    <p>순서대로 `상하` `좌우` 적용</p>
+    <table>
+      <thead>
+        <tr>
+          <th>값 개수</th>
+          <th>의미</th>
+          <th>예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1개</td>
+          <td>상, 하, 좌, 우 동일</td>
+          <td><code>padding: 10px;</code></td>
+        </tr>
+        <tr>
+          <td>2개</td>
+          <td>상하 / 좌우</td>
+          <td><code>padding: 10px 20px;</code></td>
+        </tr>
+        <tr>
+          <td>3개</td>
+          <td>상 / 좌우 / 하</td>
+          <td><code>padding: 10px 20px 30px;</code></td>
+        </tr>
+        <tr>
+          <td>4개</td>
+          <td>상 / 우 / 하 / 좌</td>
+          <td><code>padding: 10px 20px 30px 40px;</code></td>
+        </tr>
+      </tbody>
+    </table>  
+    <h2>박스 총 사이즈의 비밀</h2>
+    <p>다음과 같이 박스 사이즈를 정했을 때, 실제 해당 박스의 사이즈가 몇일까요?</p>
+    <p>div{
+      width: 100; hegith:100px;
+      border-style:dashed;
+      border-color:black;
+      border-width: 5px;
+      padding: 10px;
+      margin: 50px;}</p>
+    <p>박스 사이즈를 지정해놓아, 100x100 사이즈가 될 것 같지만,
+      실제로는 100 + (border-size * 2) + (padding 사이즈 * 2) 가 되어
+      100 + 10 + 20
+      130x130의 사이즈를 가지게 됩니다.
+    </p>
+    <p>원하는 것은, 100의 사이즈인데, 설정에 따라서 사이즈가 변하면, 화면 구성이 바뀔 수도 있기때문에, 적절히 잘 사용해야 합니다.</p>
+    <h2>box-sizing 속성 사용</h2>
+    <p>위의 문제(?)는 box-sizing 속성을 통해 해결할 수 잇습니다.</p>
+    <p>content-box : 기본값, 즉 width, hegith는 컨텐츠 사이즈만을 정의함</p>
+    <p>border-box : 컨텐츠, 안쪽여백, 테두리 까지 사이즈로 정의하는 속성</p>
+    <p>div{ box-sizing:border-box }</p>
+    <h2>background</h2>
+    <p>background는 콘텐츠의 배경을 정의합니다. 단축 속성으로, 색상 이미지, 반복 등 다양한 하위 속성으 ㄹ정의할 수 있습니다.</p>
+    <p>background-color : 배경 색을 정의한다.</p>
+    <p>background-image : 배경 이미지를 정의한다.</p>
+    <p>background-position : 배경 이미지의 초기 위치를 정의한다.</p>
+    <p>background-size : 배경 이미지의 크기를 정의한다.</p>
+    <p>background-repeat : 배경 이미지의 반복 방법을 정의한다.</p>
+    <p><a href="https://developer.mozilla.org/ko/docs/Web/CSS/background">상세한 정보는 링크</a>를 통해 확인하는 것이 더 좋습니다.</p>
+  </div>
+  <div>
+    <h1>float 속성</h1>
+    <h2>float 이란?</h2>
+    <p>float 속성은 요소가 문서의 일반적인 흐름에서 제외되어 자신을 포함하고 있는 컨테이너의 왼쪽이나 오른쪽에 배치되게 한다.</p>
+    <p>문서의 흐름에선 제외되지만, 필요한 만큼의 공간은 차지합니다.</p>
+    <p>none : 기본값</p>
+    <p>left : 자신을 포함하고 있는 박스의 왼편에 떠 있어야 함</p>
+    <p>right : 자신을 포함하고 있는 박스의 오른쪽에 떠 있어야 함</p>
+    <h2>테스트해보기</h2>
+    <div id="a"></div>
+    <div id="b"></div>
+    <p>세번째태그입니다.</p>
+    <h3>만약 여기서, float 속성을 주게 된다면 다음과 같이 변하게 됩니다.</h3>
+    <div id="a-float"></div>
+    <div id="b-float"></div>
+    <p>세번째태그입니다.</p>
+  </div>
+  <div>
+    <h1>position 위치 정하기</h1>
+    <h2>position 이란? </h2>
+    <p>position은 문서 상에 요소를 배치하는 방법을 정의합니다.</p>
+    <p>position이 요소의 배치 방법을 결정하면, top, bottom, right, left가 최종 위치를 결정하는 방식입니다.</p>
+    <img src="/images/position.png" alt="">
+    <h2>position 속성값</h2>
+    <p>position 속성에는 다음 속성값들을 지정할 수 있다.</p>
+    <p>static : 기본값. 요소를 일반적인 문서 흐름에 따라 배치한다.</p>
+    <p>relative : 일반적인 문서 흐름에 따라 배치하되, 상하좌우 위치 값에 따라 오프셋을 적용한다.</p>
+    <p>absolute : 일반적인 문서 흐름에서 제거하고, 가장 가까운 position 지정 요소에 대해 상대적으로 오프셋을 적용한다.</p>
+    <p>fixed : 일반적인 문서 흐름에서 제거하고, 지정한 위치에 고정된다.</p>
+    <p>sticky : 일반적인 문서 흐름에서 제거하고, 스크롤 동작이 존재하는 가장 가까운 요소에 대해 오프셋을 적용한다.</p>
+    <hr>
+    <h2>position: relative 사용</h2>
+    <div id="position-relative">
+      <p>position이 설정된 태그 안에서 p태그를 사용해 보았습니다.</p>
+    </div>
+    <p>포지션이 없는 곳에서의 p 태그 사용입니다.</p>
+    <hr>
+    <h2>position: absolute 사용</h2>
+    <div id="position-absolute">
+      <p>자신의 가장 자까운 position의 상대적으로 offset 적용.</p>
+    </div>
+    <p>만약 가장 가까운 position 요소가 없다면, 브라우저를 기준으로 offset을 적용합니다.</p>
+    <br><br><br><br><br><br><br>
+    <hr>
+    <h2>position: fixed</h2>
+    <div id="position-fixed">
+      <p>position-fixed</p>
+    </div>
+    <p>html 문서 처음 열었을때부터 아래쪽에 이상한 박스 하나가 같이 다니는게 fixed 를 사용한 것이다.</p>
+    <hr>
+    <h2>position: sticky</h2>
+    <p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p>
+    <p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p>
+    <p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p>
+    <p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p>
+    <p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p><p>첫번째</p>
+    <div id="position-sticky"></div>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+    <p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p><p>두번째</p>
+  </div>
+  <div>
+    <h1>flexbox</h1>
+    <h2>flexbox 란?</h2>
+    <p>flexbox란 박스 내 요소 간의 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 입니다.</p>
+    <p>flexbox를 1차원 모델이라 부르는 이유는, 레이아웃을 다룰 때 한번에 하나 차원만을 다룬다는 특성 때문이다.</p>
+    <p>기본적으로 행 방향으로 정렬을 합니다.</p>
+    <hr>
+    <h2>flexbox 적용전</h2>
+    <div class="item">하나</div>
+    <div class="item">둘</div>
+    <div class="item">셋</div>
+    <h2>flexbox 적용 후</h2>
+    <div class="container" style="display: flex;">
+      <div class="item">하나</div>
+      <div class="item">둘</div>
+      <div class="item">셋</div>
+    </div>
+    <br>
+    <hr>
+    <h2>먼저 알아야될 것</h2>
+    <p>flexbox에는 '주축'과 '교차축' 이 있다.</p>
+    <img src="/images/flexbox.PNG" alt="">
+    <hr>
+    <h2>flex-direction</h2>
+    <p>flex-direction 속성을 통해서 flexbox내 요소를 배치할 때, 사용할 주축 및 방향(정방향, 역방향)을 지정한다.</p>
+    <p>row : 기본값, 주축은 행, 방향은 콘텐츠의 방향과 동일</p>
+    <p>row-reverse : 주축은 행이고, 방향은 콘텐츠의 방향과 반대</p>
+    <p>column : 주축은 열이고, 방향은 콘텐츠의 방향과 동일</p>
+    <p>column : 주축은 열이고, 방향은 콘텐츠의 방향과 반대</p>
+    <hr>
+    <h2>flexbox 다루기</h2>
+    <p>flexbox를 다루기 위해 다음과 같은 속성들을 사용할 수 있다.</p>
+    <p>주축 배치 방법 : justify-content</p>
+    <p>교차축 배치 방법 : align-items</p>
+    <p>교차축 개별 요소 배치 방법 : align-self</p>
+    <p>줄 바꿈 여부 : flex-wrap</p>
+    <hr>
+    <h2>주축 배치 방법 (justfiy-content) 테스트</h2>
+    <p>default 상태</p>
+    <div class="container">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>justify-content:center 상태</p>
+    <div class="container-justify-content-center">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>justify-content:flex-start 상태</p>
+    <div class="container-justify-content-flext-start">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>justify-content:flex-end 상태</p>
+    <div class="container-justify-content-flext-end">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>justify-content:space-around 상태</p>
+    <div class="container-justify-content-space-around">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>justify-content:space-between 상태</p>
+    <div class="container-justify-content-space-between">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <h2>교차축 배치 방법 (align-items) 테스트</h2>
+    <p>default 상태</p>
+    <div class="container-align-items-default">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <p>align-items: flex-end 상태</p>
+    <div class="container-align-items-flex-end">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <hr>
+    <h2>교차축 개별 요소 배치 (align-self) 테스트</h2>
+    <p>2번 요소에만 self class 추가</p>
+    <div class="container-align-items-default">
+      <div class="flexbox_item">1</div>
+      <div class="flexbox_item self">2</div>
+      <div class="flexbox_item">3</div>
+    </div>
+    <hr>
+    <h2>지금 flex container의 사이즈가 300x300 인데, 아이템들의 크기가 더 커지면 어떻게 될까?</h2>
+    <p>각 아이템을 120x60으로 설정.</p>
+    <div class="container-align-items-default">
+      <div class="flexbox_item_sizeup">1</div>
+      <div class="flexbox_item_sizeup">2</div>
+      <div class="flexbox_item_sizeup">3</div>
+    </div>
+    <h2>튀어 나가야 되거나, 마지막은 표기가 안될걸 기대했는데, 아이템 사이즈가 작아져 버렸다.</h2>
+    <h2>이때, 사용할 수 있는게, flex-wrap 속성이다.</h2>
+    <hr>
+    <h2>flex-wrap 사용해보기</h2>
+    <h2>flex-wrap : nowrap</h2>
+    <div class="container-flex-wrap-nowrap">
+      <div class="flexbox_item_sizeup">1</div>
+      <div class="flexbox_item_sizeup">2</div>
+      <div class="flexbox_item_sizeup">3</div>
+    </div>
+    <h2>flex-wrap : wrap</h2>
+    <div class="container-flex-wrap-wrap">
+      <div class="flexbox_item_sizeup">1</div>
+      <div class="flexbox_item_sizeup">2</div>
+      <div class="flexbox_item_sizeup">3</div>
+    </div>
+    <h2>flex-wrap : wrap</h2>
+    <div class="container-flex-wrap-wrap-reverse">
+      <div class="flexbox_item_sizeup">1</div>
+      <div class="flexbox_item_sizeup">2</div>
+      <div class="flexbox_item_sizeup">3</div>
+    </div>
+  </div>
+  <div>
+    <h1>의사 클래스</h1>
+    <h2>의사 클래스란?</h2>
+    <p>의사클래스(가상클래스)는 선택자에 추가하는 키워드로, 요소가 어떤 특정한 상태가 되었을 때 요소를 선택하겠다는 의미입니다.</p>
+    <p> h1:hover{ color : red } </p>
+    <p> 선택자:의사클래스{ 속성명: 속성값: }</p>
+    <p> 마우스를 올리면 (hover) 빨간색으로 바꾸겟다! </p>
+    <hr>
+    <h2>의사 클래스 종류</h2>
+    <p>hover : 마우스 포인터가 요소에 올라가 있다.</p>
+    <p>active : 사용자가 요소를 활성화했다. (예를들면, 마우스로 누르기와 같은)</p>
+    <p>focus : 요소가 포커스를 받고 있다.</p>
+    <p>disabled : 비활성 상태의 요소이다.</p>
+    <p>nth-child : 형제 사이에서의 순서에 따라 요소를 선택한다.</p>
+    <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes" target="_blank">MDN 문서</a>
+    <hr>
+    <h2>사용해보기</h2>
+    <input type="button" value="버튼">
+    <br>
+    <br>
+    <input type="text" placeholder="아무거나 쓰기">
+    <br>
+    <br>
+    <br>
+    <h2>nth-child</h2>
+    <div class="class-test">
+      <div class="class-box">1번박스</div>
+      <div class="class-box">2번박스</div>
+      <div class="class-box">3번박스</div>
+      <div class="class-box">4번박스</div>
+      <div class="class-box">5번박스</div>
+      <div class="class-box">6번박스</div>
+    </div>
+  </div>
+</body>
+</html>
