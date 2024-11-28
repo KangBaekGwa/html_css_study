@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백과-구글</title>
+    <style>
+      .google-main {
+        margin-top: 232px;
+        text-align: center;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 90px;
+        line-height: 105px;
+        text-align: center;
+        letter-spacing: -18px;
+      }
+      .google-main span:nth-child(1) {
+        color: rgba(66, 133, 244, 1);
+      }
+      .google-main span:nth-child(2) {
+        color: rgba(234, 67, 53, 1);
+      }
+      .google-main span:nth-child(3) {
+        color: rgba(252, 198, 41, 1);
+      }
+      .google-main span:nth-child(4) {
+        color: rgba(66, 133, 244, 1);
+      }
+      .google-main span:nth-child(5) {
+        color: rgba(52, 168, 83, 1);
+      }
+      .google-main span:nth-child(5) {
+        color: rgba(234, 67, 53, 1);
+      }
+
+      .main-input {
+        display: block;
+        margin: 0 auto;
+        width: 616px;
+        height: 46px;
+        background-color: #ffffff;
+        border: 1px solid rgba(223, 225, 229, 1);
+        border-radius: 24px;
+      }
+      .button-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 268px;
+        margin: 0 auto;
+        margin-top: 26px;
+      }
+      .button-box :nth-child(1) {
+        width: 111px;
+        height: 36px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        background-color: #f8f9fa;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+      }
+      .button-box :nth-child(2) {
+        width: 143px;
+        height: 36px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        background-color: #f8f9fa;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="google-main">
+      <span>G</span>
+      <span>o</span>
+      <span>o</span>
+      <span>g</span>
+      <span>l</span>
+      <span>e</span>
+    </h1>
+    <form action="https://www.google.com/search" method="get">
+      <input class="main-input" type="text" name="q" />
+      <div class="button-box">
+        <button type="submit">Google 검색</button>
+        <button>I'm Felling Lucky</button>
+      </div>
+    </form>
+  </body>
+</html>
